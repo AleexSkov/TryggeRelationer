@@ -1,30 +1,61 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">TryggeRelationer</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+﻿<nav class="navbar">
+    <a class="brand" href="/">
+        <span>Trygge</span> Relationer
+    </a>
+
+    <div class="nav-links">
+        <a href="#om-helle">Om Helle</a>
+        <a href="#kontakt">Kontakt</a>
     </div>
-</div>
+</nav>
 
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
-    <nav class="nav flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-    </nav>
-</div>
-
-@code {
-    private bool collapseNavMenu = true;
-
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
+<style>
+    .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 28px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10;
     }
 
-}
+    .brand {
+        color: #293b32;
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+    .brand span {
+        font-weight: 700;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 32px;
+    }
+
+    .nav-links a {
+        color: #53665a;
+        text-decoration: none;
+        font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+        color: #293b32;
+    }
+
+    @@media (max-width: 600px) {
+        .navbar {
+            padding: 24px 6%;
+        }
+
+        .nav-links {
+            gap: 16px;
+        }
+    }
+</style>

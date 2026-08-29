@@ -1,7 +1,229 @@
 ﻿@page "/"
 
-<PageTitle>Hjem</PageTitle>
+<section class="hero">
+    <div class="hero-content">
+        <p class="eyebrow">Terapi · Fredericia</p>
 
-<h1>Hello, world!</h1>
+        <h1>
+            Et trygt sted<br />
+            at være dig.
+        </h1>
 
-Velkommen til Trygge Relationer!
+        <p class="intro">
+            Jeg hedder Helle Kjærgaard og tilbyder samtaleterapi
+            med fokus på dig, dine relationer og det, der fylder i dit liv.
+        </p>
+
+        <a class="button" href="mailto:Helle@tryggerelationer.dk">
+            Kontakt Helle
+        </a>
+    </div>
+
+    <div class="hero-decoration">
+        <div class="circle circle-one"></div>
+        <div class="circle circle-two"></div>
+    </div>
+</section>
+
+<section id="om-helle" class="about">
+    <div>
+        <p class="eyebrow">Om Helle</p>
+        <h2>Plads til det,<br />der betyder noget.</h2>
+    </div>
+
+    <p>
+        Hos Trygge Relationer er der plads til at sætte ord på det,
+        der kan være svært at stå alene med. Sammen undersøger vi
+        dine tanker, følelser og relationer i et trygt rum.
+    </p>
+</section>
+
+<section id="kontakt" class="contact">
+    <p class="eyebrow">Kontakt</p>
+    <h2>Har du lyst til<br />at tage en snak?</h2>
+
+    <a class="email" href="mailto:Helle@tryggerelationer.dk">
+        Helle@tryggerelationer.dk
+    </a>
+
+    <p>Fredericia</p>
+</section>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .hero {
+        min-height: 100vh;
+        padding: 160px 8% 100px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        background: #f5f0e8;
+    }
+
+    .hero-content {
+        max-width: 700px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .eyebrow {
+        margin: 0 0 20px;
+        color: #718878;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        font-size: 0.75rem;
+        font-weight: 700;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: clamp(3.5rem, 8vw, 7rem);
+        line-height: 0.95;
+        letter-spacing: -0.04em;
+        font-weight: 500;
+        color: #293b32;
+    }
+
+    .intro {
+        max-width: 560px;
+        margin: 36px 0;
+        font-size: 1.2rem;
+        line-height: 1.7;
+        color: #59685e;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 15px 28px;
+        background: #526b59;
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-size: 0.95rem;
+        transition: transform 0.2s, background 0.2s;
+    }
+
+    .button:hover {
+        transform: translateY(-2px);
+        background: #405647;
+    }
+
+    .hero-decoration {
+        position: absolute;
+        right: 5%;
+        top: 20%;
+        width: 500px;
+        height: 500px;
+    }
+
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+    }
+
+    .circle-one {
+        width: 420px;
+        height: 420px;
+        background: #d9dfd3;
+        right: 0;
+        top: 40px;
+    }
+
+    .circle-two {
+        width: 220px;
+        height: 220px;
+        background: #b8c8b9;
+        right: 250px;
+        bottom: 0;
+    }
+
+    .about {
+        padding: 120px 8%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
+        background: #e8e4da;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        line-height: 1;
+        letter-spacing: -0.035em;
+        font-weight: 500;
+        color: #293b32;
+    }
+
+    .about > p {
+        max-width: 520px;
+        margin: 45px 0 0;
+        font-size: 1.15rem;
+        line-height: 1.8;
+        color: #59685e;
+    }
+
+    .contact {
+        padding: 140px 8%;
+        text-align: center;
+        background: #f5f0e8;
+    }
+
+    .contact h2 {
+        margin-bottom: 40px;
+    }
+
+    .email {
+        display: inline-block;
+        color: #526b59;
+        font-size: clamp(1.2rem, 3vw, 2rem);
+        text-decoration: none;
+        border-bottom: 1px solid #526b59;
+        padding-bottom: 5px;
+    }
+
+    .contact > p:last-child {
+        margin-top: 30px;
+        color: #718878;
+    }
+
+    @@media (max-width: 800px) {
+        .hero {
+            padding-top: 140px;
+        }
+
+        .hero-decoration {
+            opacity: 0.5;
+            right: -180px;
+        }
+
+        .about {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .about > p {
+            margin-top: 0;
+        }
+    }
+
+    @@media (max-width: 600px) {
+        .nav-links {
+            display: none;
+        }
+
+        .hero {
+            padding-left: 6%;
+            padding-right: 6%;
+        }
+
+        .about,
+        .contact {
+            padding-left: 6%;
+            padding-right: 6%;
+        }
+    }
+</style>

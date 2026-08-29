@@ -1,34 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TryggeRelationer</title>
+
+    <title>Trygge Relationer – Helle Kjærgaard</title>
+
+    <meta name="description"
+          content="Trygge Relationer – samtaleterapi ved Helle Kjærgaard i Fredericia. Et trygt rum til tanker, følelser og relationer." />
+
+    <meta name="author" content="Helle Kjærgaard" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="Trygge Relationer – Helle Kjærgaard" />
+    <meta property="og:description"
+          content="Samtaleterapi ved Helle Kjærgaard i Fredericia. Et trygt rum til tanker, følelser og relationer." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tryggerelationer.dk/" />
+    <meta property="og:locale" content="da_DK" />
+
+    <link rel="icon" type="image/png" href="favicon.png" />
+
     <base href="/" />
-    <link rel="preload" id="webassembly" />
+
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/app.css" />
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link href="TryggeRelationer.styles.css" rel="stylesheet" />
+    
     <script type="importmap"></script>
 </head>
 
 <body>
-    <div id="app">
-        <svg class="loading-progress">
-            <circle r="40%" cx="50%" cy="50%" />
-            <circle r="40%" cx="50%" cy="50%" />
-        </svg>
-        <div class="loading-progress-text"></div>
-    </div>
 
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="." class="reload">Reload</a>
-        <span class="dismiss">🗙</span>
-    </div>
-    <script src="_framework/blazor.webassembly#[.{fingerprint}].js"></script>
+<div id="app">
+    <svg class="loading-progress">
+        <circle r="40%" cx="50%" cy="50%" />
+        <circle r="40%" cx="50%" cy="50%" />
+    </svg>
+    <div class="loading-progress-text"></div>
+</div>
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>
+
+<script src="_framework/blazor.webassembly#[.{fingerprint}].js"></script>
+
 </body>
 
 </html>

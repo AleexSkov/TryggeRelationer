@@ -1,16 +1,21 @@
-﻿@inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
-        <NavMenu/>
-    </div>
+﻿@inherits Microsoft.AspNetCore.Components.LayoutComponentBase
+
+<div class="site">
+    <NavMenu />
 
     <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
-            @Body
-        </article>
+        @Body
     </main>
 </div>
+
+<style>
+    .site {
+        min-height: 100vh;
+        background: #f5f0e8;
+        color: #293b32;
+    }
+
+    main {
+        width: 100%;
+    }
+</style>
