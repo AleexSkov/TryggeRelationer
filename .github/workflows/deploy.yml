@@ -29,6 +29,5 @@ jobs:
           password: ${{ secrets.ONE_PASSWORD }}
           port: ${{ secrets.ONE_PORT }}
           local_path: './TryggeRelationer/bin/Release/net10.0/publish/wwwroot/*'
-          remote_path: './'
+          remote_path: '/webroots/c4cb5160/'
           sftp_only: true
-          ssh_private_key: ${{ secrets.ONE_SSH_KEY }}
