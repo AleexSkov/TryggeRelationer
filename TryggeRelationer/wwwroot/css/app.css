@@ -113,3 +113,57 @@ code {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+
+/* =========================================
+   Welcome loading screen
+   ========================================= */
+
+.welcome-loading {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4efe6;
+    color: #29443a;
+    text-align: center;
+}
+
+.welcome-loading-content {
+    padding: 2rem;
+    animation: welcomeFadeIn 1.2s ease-out;
+}
+
+.welcome-loading-label {
+    display: block;
+    margin-bottom: 1rem;
+    color: #607d6d;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
+
+.welcome-loading h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+}
+
+.welcome-loading p {
+    margin: 1rem 0 0;
+    color: #607067;
+    font-size: 1.1rem;
+}
+
+@keyframes welcomeFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
