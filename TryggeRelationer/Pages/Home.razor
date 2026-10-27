@@ -1,7 +1,7 @@
 ﻿@page "/"
 
 <section class="hero">
-    <div class="hero-content">
+    <div class="hero-content reveal">
         <p class="eyebrow">Terapi · Fredericia</p>
 
         <h1>
@@ -10,9 +10,15 @@
         </h1>
 
         <p class="intro">
-            Jeg hedder Helle Kjærgaard og tilbyder samtaleterapi
-            med fokus på dig, dine relationer og det, der fylder i dit liv.
+            Jeg hedder Helle Kjærgaard og er certificeret par-,
+            forældre- og familieterapeut.
         </p>
+
+        <a class="credential" href="https://nordicparenting.dk/sofie-munster/"
+           target="_blank" rel="noopener">
+            <span>Uddannet hos Nordic Parenting, ved psykolog Sofie Münster</span>
+            <img src="images/nopa-logo.svg" alt="Nordic Parenting NOPA" />
+        </a>
 
         <a class="button" href="mailto:Helle@tryggerelationer.dk">
             Kontakt Helle
@@ -26,19 +32,36 @@
 </section>
 
 <section id="om-helle" class="about">
-    <div>
+    <div class="reveal">
         <p class="eyebrow">Om Helle</p>
         <h2>Plads til det,<br />der betyder noget.</h2>
     </div>
 
-    <p>
-        Hos Trygge Relationer er der plads til at sætte ord på det,
-        der kan være svært at stå alene med. Sammen undersøger vi
-        dine tanker, følelser og relationer i et trygt rum.
-    </p>
+    <div class="about-text reveal" style="transition-delay: 150ms">
+        <p>
+            Jeg tilbyder samtaler til dig som enkeltperson, til jer som par,
+            forældre og familier i et trygt og fortroligt terapeutisk rum.
+        </p>
+        <p>
+            Jeg tager udgangspunkt i dig og dine relationer, hvor jeg kan hjælpe
+            med at afdække de underliggende årsager til udfordringer og ubalance
+            i forholdet eller i familien.
+        </p>
+        <p>
+            Vi vil sammen arbejde med de uhensigtsmæssige dynamikker og mønstre,
+            der kan udspille sig i jeres par- eller forældrerelation og derudfra
+            forsøge at skabe forandring og udvikling.
+        </p>
+        <p>
+            Målet er at skabe mulighed for en anden forståelse og kontakt, samt at
+            styrke kommunikationen om det der kan udfordre og være sårbart, så der
+            igen kan skabes nærhed, tryghed og trivsel i forholdet, familien eller
+            andre relationer.
+        </p>
+    </div>
 </section>
 
-<section id="kontakt" class="contact">
+<section id="kontakt" class="contact reveal">
     <p class="eyebrow">Kontakt</p>
     <h2>Har du lyst til<br />at tage en snak?</h2>
 
@@ -46,7 +69,55 @@
         Helle@tryggerelationer.dk
     </a>
 
+    <a class="phone" href="tel:+4529932114">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"
+             fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
+            <path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z" />
+        </svg>
+        29 93 21 14
+    </a>
+
+    <a class="instagram" href="https://www.instagram.com/tryggerelationer/"
+       target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"
+             fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" />
+        </svg>
+        @@tryggerelationer
+    </a>
+
     <p>Fredericia</p>
+</section>
+
+<section id="praktisk" class="practical">
+    <div class="reveal">
+        <p class="eyebrow">Praktisk info</p>
+        <h2>Her finder<br />du mig.</h2>
+
+        <address>
+            Trygge Relationer<br />
+            Lathyrusvej 12<br />
+            7000 Fredericia
+        </address>
+
+        <p>
+            Telefon: <a href="tel:+4529932114">29 93 21 14</a><br />
+            Mail: <a href="mailto:Helle@tryggerelationer.dk">Helle@tryggerelationer.dk</a>
+        </p>
+
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Lathyrusvej+12,+7000+Fredericia"
+           target="_blank" rel="noopener">
+            Find vej i Google Maps →
+        </a>
+    </div>
+
+    <div class="map reveal" style="transition-delay: 150ms">
+        <iframe title="Kort over Lathyrusvej 12, 7000 Fredericia"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=9.7456%2C55.5696%2C9.7576%2C55.5756&amp;layer=mapnik&amp;marker=55.57258%2C9.75159"
+                loading="lazy"></iframe>
+    </div>
 </section>
 
 <style>
@@ -90,10 +161,33 @@
 
     .intro {
         max-width: 560px;
-        margin: 36px 0;
+        margin: 36px 0 12px;
         font-size: 1.2rem;
         line-height: 1.7;
         color: #59685e;
+    }
+
+    .credential {
+        margin: 0 0 36px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px 16px;
+        width: fit-content;
+        font-size: 0.95rem;
+        color: #718878;
+        text-decoration: none;
+    }
+
+    .credential:hover span {
+        color: #293b32;
+        text-decoration: underline;
+    }
+
+    .credential img {
+        height: 22px;
+        width: auto;
+        opacity: 0.8;
     }
 
     .button {
@@ -158,9 +252,13 @@
         color: #293b32;
     }
 
-    .about > p {
-        max-width: 520px;
-        margin: 45px 0 0;
+    .about-text {
+        max-width: 560px;
+        margin-top: 45px;
+    }
+
+    .about-text p {
+        margin: 0 0 1.4em;
         font-size: 1.15rem;
         line-height: 1.8;
         color: #59685e;
@@ -185,12 +283,72 @@
         padding-bottom: 5px;
     }
 
+    .phone,
+    .instagram {
+        display: flex;
+        width: fit-content;
+        margin: 28px auto 0;
+        align-items: center;
+        gap: 8px;
+        color: #526b59;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    .phone:hover,
+    .instagram:hover {
+        color: #293b32;
+    }
+
     .contact > p:last-child {
         margin-top: 30px;
         color: #718878;
     }
 
+    .practical {
+        padding: 120px 8%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+        background: #e8e4da;
+    }
+
+    .practical address,
+    .practical p:not(.eyebrow) {
+        margin: 30px 0 0;
+        font-style: normal;
+        font-size: 1.15rem;
+        line-height: 1.8;
+        color: #59685e;
+    }
+
+    .practical a {
+        color: #526b59;
+    }
+
+    .practical .map-link {
+        display: inline-block;
+        margin-top: 30px;
+        text-decoration: none;
+        border-bottom: 1px solid #526b59;
+        padding-bottom: 3px;
+    }
+
+    .map iframe {
+        display: block;
+        width: 100%;
+        height: 380px;
+        border: 0;
+        border-radius: 24px;
+    }
+
     @@media (max-width: 800px) {
+        .practical {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
         .hero {
             padding-top: 140px;
         }
@@ -205,7 +363,7 @@
             gap: 30px;
         }
 
-        .about > p {
+        .about-text {
             margin-top: 0;
         }
     }
@@ -221,7 +379,8 @@
         }
 
         .about,
-        .contact {
+        .contact,
+        .practical {
             padding-left: 6%;
             padding-right: 6%;
         }

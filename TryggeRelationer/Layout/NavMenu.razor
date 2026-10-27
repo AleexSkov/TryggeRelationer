@@ -1,17 +1,19 @@
 ﻿<nav class="navbar">
     <a class="brand" href="/">
-        <span>Trygge</span> Relationer
+        <img src="images/logo-mark.png" alt="" />
+        <span><strong>Trygge</strong> Relationer</span>
     </a>
 
     <div class="nav-links">
         <a href="#om-helle">Om Helle</a>
         <a href="#kontakt">Kontakt</a>
+        <a href="#praktisk">Praktisk info</a>
     </div>
 </nav>
 
 <style>
     .navbar {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -21,16 +23,38 @@
         justify-content: space-between;
         align-items: center;
         z-index: 10;
+        transition: padding 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    html.scrolled .navbar {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        background: rgba(245, 240, 232, 0.92);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 1px 0 rgba(41, 59, 50, 0.08);
     }
 
     .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
         color: #293b32;
         text-decoration: none;
         font-size: 1.25rem;
         font-weight: 500;
     }
 
-    .brand span {
+    .brand img {
+        height: 40px;
+        width: auto;
+        transition: height 0.3s ease;
+    }
+
+    html.scrolled .brand img {
+        height: 32px;
+    }
+
+    .brand strong {
         font-weight: 700;
     }
 
